@@ -2,17 +2,40 @@
 2373658
 dbozarth@chapman.edu
 CPSC 350-02
-Assignment 4 - DNAComplement.h */
+Assignment 4 - DNAComplement.cpp */
+
+/*
+This is the .cpp file for DNAComplement
+*/
+
+//this statement includes the DNAComplement.h file
 #include "DNAComplement.h"
 
+/*
+Function: DNAComplement()
+Return: none
+Parameters: none (default constructor)
+Exceptions: none
+*/
 DNAComplement::DNAComplement(){
-
 }
 
+/*
+Function: ~DNAComplement()
+Return: none
+Parameters: none (destructor)
+Exceptions: none
+*/
 DNAComplement::~DNAComplement(){
-
 }
 
+/*
+Function: calculateComplement()
+Return: string
+Parameters: string dnaLine
+Exceptions: none
+*/
+//takes in a DNA lines and returns the complement of that DNA string
 string DNAComplement::calculateComplement(string dnaLine){
   string complement;
   for (int i = 0; i < dnaLine.length(); ++i){
@@ -36,6 +59,13 @@ string DNAComplement::calculateComplement(string dnaLine){
   return complement;
 }
 
+/*
+Function: calculateReverseComplement()
+Return: string
+Parameters: string dnaLine
+Exceptions: none
+*/
+//takes in a complement of a DNA line, and returns the reversed line
 string DNAComplement::calculateReverseComplement(string dnaLine){
   GenStack<char> *stack = new GenStack<char>();
   string reverseComplement;

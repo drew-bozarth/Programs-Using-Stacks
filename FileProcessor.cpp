@@ -3,16 +3,45 @@
 dbozarth@chapman.edu
 CPSC 350-02
 Assignment 4 - FileProcessor.cpp */
+
+/*
+This is the .cpp file for FileProcessor
+*/
+
+//this statement includes the FileProcessor.h file
 #include "FileProcessor.h"
 
+/*
+Function: FileProcessor()
+Return: none
+Parameters: none (default constructor)
+Exceptions: none
+*/
 FileProcessor::FileProcessor(){
 
 }
 
+/*
+Function: FileProcessor()
+Return: none
+Parameters: none (destructor)
+Exceptions: none
+*/
 FileProcessor::~FileProcessor(){
 
 }
 
+/*
+Function: processFile()
+Return: void
+Parameters: string inputFilePath, string outputFile
+Exceptions: none
+*/
+/*
+this method opens the input and output files, then creates an instance of the DNAComplement class.
+For each line that is read in the file, it calculates the complement, and reverse Complement, then
+prints out the original DNA line with the two new lines to the output file
+*/
 void FileProcessor::processFile(string inputFilePath, string outputFile){
   string fileLine;
   ifstream input (inputFilePath);
